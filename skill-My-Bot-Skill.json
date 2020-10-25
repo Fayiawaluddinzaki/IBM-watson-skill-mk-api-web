@@ -1,0 +1,458 @@
+{
+  "intents": [
+    {
+      "intent": "banyak",
+      "examples": [
+        {
+          "text": "apa"
+        },
+        {
+          "text": "apa saja"
+        },
+        {
+          "text": "apa saja coba sebutkan"
+        },
+        {
+          "text": "banyak apa saja"
+        },
+        {
+          "text": "coba sebutkan"
+        },
+        {
+          "text": "coba sebutkan matkul semester 1"
+        },
+        {
+          "text": "coba sebutkan matkul semester 2"
+        },
+        {
+          "text": "coba sebutkan matkul semester 4"
+        },
+        {
+          "text": "coba sebutkan matkul semester 5"
+        },
+        {
+          "text": "coba sebutkan matkul semester 6"
+        },
+        {
+          "text": "coba sebutkan matkul semester 7"
+        },
+        {
+          "text": "coba sebutkan matkul semester 8"
+        },
+        {
+          "text": "info matkul informatika"
+        },
+        {
+          "text": "info matkul tf"
+        },
+        {
+          "text": "semester"
+        },
+        {
+          "text": "ya apa saja"
+        }
+      ],
+      "description": "respon tanya balik"
+    },
+    {
+      "intent": "hari",
+      "examples": [
+        {
+          "text": "jumat"
+        },
+        {
+          "text": "kamis"
+        },
+        {
+          "text": "rabu"
+        },
+        {
+          "text": "selasa"
+        },
+        {
+          "text": "senin"
+        }
+      ],
+      "description": "nama hari"
+    },
+    {
+      "intent": "jurusan",
+      "examples": [
+        {
+          "text": "jurusan apa?"
+        },
+        {
+          "text": "mata kuliah apa?"
+        },
+        {
+          "text": "mata kuliah jurusan apa?"
+        },
+        {
+          "text": "matkul apa"
+        }
+      ],
+      "description": "tanya jurusan"
+    },
+    {
+      "intent": "kelas",
+      "examples": [
+        {
+          "text": "sebutkan"
+        },
+        {
+          "text": "sebutkan mata kuliah semester 3"
+        },
+        {
+          "text": "sebutkan matkul tf semester 3"
+        },
+        {
+          "text": "sebutkan semester 3"
+        }
+      ],
+      "description": "tanya kelas"
+    },
+    {
+      "intent": "kelasC",
+      "examples": [
+        {
+          "text": "c"
+        },
+        {
+          "text": "info kelas c"
+        },
+        {
+          "text": "info mata kuliah kelas c"
+        },
+        {
+          "text": "info matkul kelas c"
+        },
+        {
+          "text": "kelas c"
+        },
+        {
+          "text": "kelas pararel c"
+        },
+        {
+          "text": "mata kuliah kelas pararel c"
+        },
+        {
+          "text": "sebutkan kelas c"
+        },
+        {
+          "text": "sebutkan matkul kelas c"
+        }
+      ],
+      "description": "info kelas C"
+    },
+    {
+      "intent": "kelasD",
+      "examples": [
+        {
+          "text": "d"
+        },
+        {
+          "text": "info mata kuliah kelas pararel d"
+        },
+        {
+          "text": "info matkul kelas d"
+        },
+        {
+          "text": "kelas d"
+        },
+        {
+          "text": "kelas pararel d"
+        },
+        {
+          "text": "sebutkan mata kuliah kelas d"
+        },
+        {
+          "text": "sebutkan matkul kelas d"
+        }
+      ],
+      "description": "info kelas D"
+    },
+    {
+      "intent": "kelasMKDU",
+      "examples": [
+        {
+          "text": "info kelas mkdu"
+        },
+        {
+          "text": "kelas gabungan"
+        },
+        {
+          "text": "mkdu"
+        },
+        {
+          "text": "sebutkan kelas gabungan"
+        },
+        {
+          "text": "sebutkan kelas mkdu"
+        }
+      ],
+      "description": "info kelas gabungan"
+    },
+    {
+      "intent": "membantu",
+      "examples": [
+        {
+          "text": "Aku bisa memberimu informasi mata kuliah"
+        },
+        {
+          "text": "aku butuh info mata kuliah"
+        },
+        {
+          "text": "aku butuh info matkul"
+        },
+        {
+          "text": "apa kemampuanmu"
+        },
+        {
+          "text": "Apa yang bisa dibantu"
+        },
+        {
+          "text": "apa yang bisa kamu bantu"
+        },
+        {
+          "text": "bantuan apa"
+        },
+        {
+          "text": "info"
+        },
+        {
+          "text": "ya"
+        }
+      ],
+      "description": "awalan"
+    },
+    {
+      "intent": "Welcome",
+      "examples": [
+        {
+          "text": "Hai"
+        },
+        {
+          "text": "Hallo"
+        },
+        {
+          "text": "hi"
+        },
+        {
+          "text": "julia"
+        },
+        {
+          "text": "start"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Aku gak paham"
+              },
+              {
+                "text": "Apa maksudmu"
+              },
+              {
+                "text": "Salah input"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_7_1571109241413"
+    },
+    {
+      "type": "standard",
+      "title": "jurusan",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Mata Kuliah Jurusan Informatika"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#jurusan",
+      "dialog_node": "node_1_1570801742887",
+      "previous_sibling": "node_3_1570801682098"
+    },
+    {
+      "type": "standard",
+      "title": "tanya kelas",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Kelas pararel apa?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#kelas",
+      "dialog_node": "node_2_1571029928555",
+      "previous_sibling": "node_3_1571102859767"
+    },
+    {
+      "type": "standard",
+      "title": "Matkul",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Aku Punya Info Mata Kuliah"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#membantu",
+      "user_label": "semester",
+      "dialog_node": "node_3_1570801682098",
+      "previous_sibling": "node_6_1571047208592"
+    },
+    {
+      "type": "standard",
+      "title": "respon aja",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Banyak Sekali, aku tahu hanya semester 3"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#banyak",
+      "user_label": "tanya kelas",
+      "dialog_node": "node_3_1571102859767",
+      "previous_sibling": "node_1_1570801742887"
+    },
+    {
+      "type": "standard",
+      "title": "kelas c",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "STATISTIK KOMPUTASI, KEWIRAUSAHAAN, PEMROGRAMAN WEB, SISTEM OPERASI"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#kelasC",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_3_1571106916560",
+      "previous_sibling": "node_2_1571029928555"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hallo, Ada yang bisa saya bantu?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#Welcome",
+      "dialog_node": "node_6_1571047208592"
+    },
+    {
+      "type": "standard",
+      "title": "kelas mkdu",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Pancasila"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#kelasMKDU",
+      "dialog_node": "node_7_1571109241413",
+      "previous_sibling": "node_8_1571106928636"
+    },
+    {
+      "type": "standard",
+      "title": "kelas d",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "METODE NUMERIK, PEMROGRAMAN LANJUT, BELA NEGARA"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#kelasD",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_8_1571106928636",
+      "previous_sibling": "node_3_1571106916560"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "tooling": {
+      "store_generic_responses": true
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "My Bot Skill",
+  "language": "en",
+  "description": "This is AI Bot for Telegram"
+}
